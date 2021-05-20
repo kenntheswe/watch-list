@@ -1,0 +1,8 @@
+<%= @list.name %>
+
+<% @list.bookmarks.each do |bookmark| %>
+  <%= image_tag "https://image.tmdb.org/t/p/w500/#{bookmark.movie.poster_url}" %>
+  <%= bookmark.comment %>
+<% end %>
+
+<%= link_to "Create a new bookmark", new_list_bookmark_path(@list) %>
