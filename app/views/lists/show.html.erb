@@ -3,6 +3,7 @@
 <% @list.bookmarks.each do |bookmark| %>
   <%= image_tag "https://image.tmdb.org/t/p/w500/#{bookmark.movie.poster_url}" %>
   <%= bookmark.comment %>
+  <%= link_to "Delete", bookmark_path(bookmark), method: :delete %>
 <% end %>
 
 <%= link_to "Create a new bookmark", new_list_bookmark_path(@list) %>
