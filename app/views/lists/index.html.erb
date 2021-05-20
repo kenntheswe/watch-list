@@ -1,6 +1,13 @@
-<h3>My Lists</h3>
-<% @lists.each do |list| %>
-  <%= link_to list.name, list_path(list) %>
-<% end %>
-
-<%= link_to "Create a new list", new_list_path %>
+<div class="container mt-5">
+  <h1>My Lists</h1>
+  <div class="cards">
+    <% @lists.each do |list| %>
+    <div class="card-body">
+      <div class="card-content">
+        <h5 class="card-title"><%= link_to list.name, list_path(list) %></h5>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <button class="btn btn-outline-secondary mt-3"><%= link_to "Create a new list", new_list_path %></button>
+</div>

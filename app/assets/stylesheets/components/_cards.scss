@@ -1,0 +1,87 @@
+$good-padding: 16px;
+
+.card-body {
+  background-size: cover;
+  color: white;
+  padding: $good-padding*6 0 0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+
+.card-body:hover, .card-body:focus-within {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: $good-padding;
+  background: linear-gradient(
+    hsla(0, 0%, 0, 0),
+    hsla(20, 0%, 0, 0.5) 20%,
+    hsla(0, 0%, 0, 1)
+  );
+  transform: translateY(60%);
+  transition: transform 500ms ease;
+}
+
+.card-body:hover .card-content,
+.card-body:focus-within .card-content {
+  transform: translateY(0);
+  transition-delay: 500ms;
+}
+
+.card-body:focus-within .card-content {
+  transition-duration: 0ms;
+}
+
+.card-title {
+  position: relative;
+}
+
+.card-title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: mediumturquoise;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 500ms ease;
+}
+
+.card-body:hover .card-title::after, 
+.card-body:focus-within .card-title::after {
+  transform: scaleX(1);
+}
+
+.card-text {
+  color: hsla(0, 0%, 100%, 0.8);
+}
+
+.card-remove-link {
+  color: white;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  opacity: 0.8;
+  font-weight: lighter;
+  text-decoration: none;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
