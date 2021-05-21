@@ -2,12 +2,11 @@
   <h1>My Lists</h1>
   <div class="cards">
     <% @lists.each do |list| %>
-    <div class="card-body">
-      <div class="card-content" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? cl_image_path(list.photo.key) : "" %>')">
+    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? cl_image_path(list.photo.key) : "" %>')">
+      <div class="card-content">
         <h5 class="card-title"><%= link_to list.name, list_path(list) %></h5>
       </div>
     </div>
     <% end %>
   </div>
-  <button class="btn btn-outline-secondary mt-3"><%= link_to "Create a new list", new_list_path %></button>
 </div>

@@ -1,9 +1,9 @@
 <div class="container mt-5">
   <h3><%= @list.name %></h3>
   <div class="cards">
-    <% @list.bookmarks.each do |bookmark| %>
-    <% image = "https://image.tmdb.org/t/p/w500/#{bookmark.movie.poster_url}" %>
-    <div class="card-body" style="background-image: url(<%= image %>)">
+    <% @list.bookmarks.each do  |bookmark| %>
+      <% image = "https://image.tmdb.org/t/p/w500/#{bookmark.movie.poster_url}" %>
+      <div class="card-body" style="background-image: url(<%= image %>)">
         <div class="card-content">
           <h5 class="card-title"><%= bookmark.movie.title %></h5>
           <p class="card-text"><%= bookmark.comment %></p>
@@ -11,8 +11,8 @@
             <i class="fas fa-trash-alt"></i>
           <% end %>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
-  <button class="btn btn-outline-secondary mt-3"><%= link_to "Create a new bookmark", new_list_bookmark_path(@list) %></button>
+  <%= link_to "Create a new bookmark", new_list_bookmark_path(@list), class: "btn btn-outline-primary mt-3" %>
 </div>
