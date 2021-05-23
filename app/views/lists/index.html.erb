@@ -1,12 +1,20 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(assets/cinema.jpg)">
+  <div class="container">
+    <h1 class="display-4">Kenn's Watch List</h1>
+    <p class="lead">Add your favorite movies to your list</p>
+  </div>
+</div>
 <div class="container mt-5">
-  <h1>My Lists</h1>
   <div class="cards">
     <% @lists.each do |list| %>
-    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? cl_image_path(list.photo.key) : "" %>')">
-      <div class="card-content">
-        <h5 class="card-title"><%= link_to list.name, list_path(list) %></h5>
+      <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? cl_image_path(list.photo.key) : "" %>')">
+        <div class="card-content">
+          <h5 class="card-title"><%= link_to list.name, list_path(list) %></h5>
+          <%= link_to list_path(list), method: :delete, data: { confirm: "Delete #{list.name}" }, class: "card-remove-link" do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+        </div>
       </div>
-    </div>
     <% end %>
   </div>
 </div>

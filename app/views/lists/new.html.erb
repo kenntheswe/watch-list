@@ -1,8 +1,10 @@
 <div class="container mt-5">
-  <h3>Create a new list</h3>
-    <%= simple_form_for(@list) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit %>
-  <% end %>
+  <div class="bg-success rounded p-3">
+    <h3>Create a new list</h3>
+      <%= simple_form_for(@list) do |f| %>
+      <%= f.input :name, placeholder: "Enter a name" %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit class: 'btn btn-primary' %>
+    <% end %>
+  </div>
 </div>
