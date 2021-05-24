@@ -1,11 +1,13 @@
 .footer {
-  background: #F4F4F4;
+  background: rgba(141, 142, 142, .8);
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
+  width: 100%;
   padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
+  color: rgb(255, 255, 255);
+  bottom: 0;
 }
 
 .footer-links {
@@ -14,11 +16,12 @@
 }
 
 .footer-links a {
-  color: black;
+  color: rgb(53, 53, 53);
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+  transition: opacity 500ms ease;
 }
 
 .footer-links a:hover {
