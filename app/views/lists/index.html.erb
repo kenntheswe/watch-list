@@ -1,5 +1,5 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/65128/pexels-photo-65128.jpeg?cs=srgb&dl=pexels-pietro-jeng-65128.jpg&fm=jpg); background-size: cover">
-  <div class="container p-3">
+  <div class="banner-container pl-4">
     <h1 class="display-4">Kenn's Watch List</h1>
     <p class="lead">Add your favorite movies to your list</p>
     <%= link_to "Create a New List", new_list_path, class: "btn btn-primary" %>
@@ -11,7 +11,7 @@
       <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? cl_image_path(list.photo.key) : "" %>')">
         <div class="card-content">
           <h5 class="card-title"><%= link_to list.name, list_path(list) %></h5>
-          <%= link_to list_path(list), method: :delete, data: { confirm: "Delete #{list.name}" }, class: "card-remove-link" do %>
+          <%= link_to list_path(list), method: :delete, data: { confirm: "Delete #{list.name}?" }, class: "card-remove-link" do %>
             <i class="fas fa-trash-alt"></i>
           <% end %>
         </div>

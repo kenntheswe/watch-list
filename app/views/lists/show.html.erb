@@ -7,13 +7,15 @@
         <div class="card-content">
           <h5 class="card-title"><%= bookmark.movie.title %></h5>
           <p class="card-text"><%= bookmark.comment %></p>
-          <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: "Delete #{bookmark.movie.title}" }, class: "card-remove-link" do %>
+          <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: "Delete #{bookmark.movie.title}?" }, class: "card-remove-link" do %>
             <i class="fas fa-trash-alt"></i>
           <% end %>
         </div>
       </div>
     <% end %>
   </div>
-  <%= link_to "Create a new bookmark", new_list_bookmark_path(@list), class: "btn btn-primary mt-3" %>
-  <%= link_to "Back", lists_path, class: "btn btn-outline-primary mt-3" %>
+  <div class="d-flex justify-content-between mt-5">
+    <%= link_to "Create a new bookmark", new_list_bookmark_path(@list), class: "btn btn-primary" %>
+    <%= link_to "Back", lists_path, class: "btn btn-secondary" %>
+  </div>
 </div>

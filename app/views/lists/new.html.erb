@@ -1,11 +1,11 @@
 <div class="container mt-5">
-  <div class="bg-success rounded p-3">
-    <h3>Create a new list</h3>
-      <%= simple_form_for(@list) do |f| %>
-      <%= f.input :name, placeholder: "Enter a name" %>
-      <%= f.input :photo, as: :file %>
+  <h3 class="text-center">Create a new list</h3>
+    <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name, placeholder: "Enter a name" %>
+    <%= f.input :photo, as: :file %>
+    <div class="d-flex justify-content-between mt-5">
       <%= f.submit class: 'btn btn-primary' %>
-    <% end %>
-  </div>
-  <%= link_to "Back", lists_path, class: "btn btn-outline-primary m-3" %>
+      <%= link_to "Back", lists_path, class: "btn btn-secondary" %>
+    </div>
+  <% end %>
 </div>

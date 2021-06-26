@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background: $sky-blue;
+}
+
+.container {
+  height: 100vh;
+}
