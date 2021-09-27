@@ -1,24 +1,45 @@
-# README
+<h1 align="center">Kenn's Watch List 🎬</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://twitter.com/kennvungan" target="_blank">
+    <img alt="Twitter: kennvungan" src="https://img.shields.io/twitter/follow/kennvungan.svg?style=social" />
+  </a>
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> Simple movie watch list built using Ruby on Rails & Bootstrap
 
-Things you may want to cover:
+### 🏠 [Homepage](https://github.com/Kenn-0/watch-list)
 
-* Ruby version
+### ✨ [Demo](https://kenns-watchlist.herokuapp.com/)
 
-* System dependencies
+## Install
 
-* Configuration
+```sh
+yarn
+```
 
-* Database creation
+## Usage
 
-* Database initialization
+```sh
+rails s
+```
 
-* How to run the test suite
+## Author
 
-* Services (job queues, cache servers, search engines, etc.)
+👤 **Kenn Vun Gan**
 
-* Deployment instructions
+* Website: https://www.kennvun.me
+* Twitter: [@kennvungan](https://twitter.com/kennvungan)
+* Github: [@Kenn-0](https://github.com/Kenn-0)
+* LinkedIn: [@kennvungan](https://linkedin.com/in/kennvungan)
 
-* ...
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Kenn-0/watch-list/issues). 
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
